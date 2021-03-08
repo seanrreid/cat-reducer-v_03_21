@@ -2,8 +2,9 @@ import { createStore } from 'redux';
 import { cat } from './reducers';
 
 const initialState = {
-    activity: 'napping'
-}
+    name: 'Guster',
+    activity: 'blepping',
+};
 
 export const store = createStore(
     cat,

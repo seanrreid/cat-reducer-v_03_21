@@ -1,21 +1,20 @@
-export const ACTION_EAT = 'eating';
-export const ACTION_NAP = 'napping';
-export const ACTION_PLAY = 'play';
+const ACTION_SET_NAME = 'ACTION_SET_NAME';
+const ACTION_SET_ACTIVITY = 'ACTION_SET_ACTIVITY';
 
-export const actionEat = () => {
+export const setName = (name) => {
     return {
-        type: ACTION_EAT,
-    };
-};
+        type: ACTION_SET_NAME,
+        payload: {
+            name
+        }
+    }
+}
 
-export const actionNap = () => {
+export const setActivity = (activity) => {
     return {
-        type: ACTION_NAP,
-    };
-};
-
-export const actionPlay = () => {
-    return {
-        type: ACTION_PLAY,
-    };
-};
+        type: ACTION_SET_ACTIVITY,
+        payload: {
+            activity
+        }
+    }
+}

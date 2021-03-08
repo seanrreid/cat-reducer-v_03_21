@@ -2,13 +2,15 @@ import { connect } from 'react-redux';
 
 const Activity = (props) => (
     <>
-        <p>The cat is {props.activity}</p>
+        <p>{props.name} is {props.activity}</p>
     </>
 );
 
 const mapStateToProps = (state) => {
+    const { name, activity } = state;
     return {
-        activity: state.activity,
+        name,
+        activity,
     };
 };
 

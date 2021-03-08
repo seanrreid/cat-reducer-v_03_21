@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { Provider } from 'react-redux';
+import { store } from './redux/store';
+import Activity from './components/Activity';
+import PlayButton from './components/PlayButton';
+import NapButton from './components/NapButton';
+import EatButton from './components/EatButton';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Provider store={store}>
+            <div className='App'>
+                <h1>Cat Reducer</h1>
+                <Activity />
+                <PlayButton />
+                <NapButton />
+                <EatButton />
+            </div>
+        </Provider>
+    );
 }
 
 export default App;

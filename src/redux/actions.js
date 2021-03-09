@@ -1,4 +1,4 @@
-import { ACTION_SET_NAME, ACTION_SET_ACTIVITY } from './actionTypes';
+import { ACTION_SET_NAME, ACTION_SET_ACTIVITY, ACTION_ADD_CAT } from './actionTypes';
 
 export const setName = (name) => {
     return {
@@ -9,10 +9,21 @@ export const setName = (name) => {
     }
 }
 
-export const setActivity = (activity) => {
+export const setActivity = (id, activity) => {
     return {
         type: ACTION_SET_ACTIVITY,
         payload: {
+            id,
+            activity
+        }
+    }
+}
+
+export const addCat = (name, activity) => {
+    return {
+        type: ACTION_ADD_CAT,
+        payload: {
+            name,
             activity
         }
     }

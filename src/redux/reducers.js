@@ -2,7 +2,7 @@ import {
     ACTION_SET_NAME,
     ACTION_SET_ACTIVITY,
     ACTION_ADD_CAT,
-} from './actionTypes';
+} from './actions';
 
 export const cat = (state, action) => {
     switch (action.type) {
